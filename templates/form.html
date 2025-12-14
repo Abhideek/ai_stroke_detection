@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Heart Disease Prediction Form</h2>
+
+        <form action="/form" method="POST">
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Gender (0 = Female, 1 = Male):</label>
+            <input type="number" name="gender" min="0" max="1" required>
+
+            <label>Blood Pressure:</label>
+            <input type="number" step="0.1" name="blood_pressure" required>
+
+            <label>Cholesterol:</label>
+            <input type="number" step="0.1" name="cholesterol" required>
+
+            <label>Max Heart Rate:</label>
+            <input type="number" step="1" name="max_hr" required>
+
+            <label>Diabetes (0 = No, 1 = Yes):</label>
+            <input type="number" min="0" max="1" name="diabetes" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
